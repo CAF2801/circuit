@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggérer un lieu | Les Balades du St-Laurent</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header id="header">
+        <h1>Les Balades du St-Laurent</h1>
+        <a href="index.html"><img src="../images/logo.svg" alt="les-balades-du-st-laurent"></a>
+        <nav id="navbar">
+            <ul id="navlist">
+                <li class="nav-button"><a href="a-propos.html">À propos</a></li>
+                <li class="nav-button"><a href="suggerer-lieu.html">Suggérer un lieu</a></li>
+                <li id="alt-linguistique" class="lang-button"><a href="#" lang="en" translate="no">English</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section id="form-container">
+            <h2>Suggérer un lieu</h2>
+            <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="form">
+                <fieldset>
+                    <legend>Informations sur le point d'intérêt</legend>
+                    <p>
+                        <label for="title">Titre</label><br>
+                        <input type="text" name="title" id="title" size="72" required>
+                    </p>
+                    <p>
+                        <label for="accroche">Accroche</label><br>
+                        <textarea name="accroche" id="accroche" cols="72" rows="3" placeholder="Inscrire l'accroche de votre point d'intérêt" required></textarea>
+                    </p>
+                    <p>
+                        <label for="description">Description</label><br>
+                        <textarea name="description" id="description" cols="72" rows="10" placeholder="Inscrire la description de votre point d'intérêt" required></textarea>
+                    </p>
+                    <p>
+                        <label for="image">Image</label><br>
+                        <input type="file" name="image" id="image" accept="image/*" capture="environment">
+                    </p>
+                    <p>
+                        <label for="clip-sonore">Clip Audio</label><br>
+                        <input type="file" name="clip-sonore" id="clip-sonore" accept="audio/*" capture="environment">
+                    </p>
+                    <p>
+                        <label for="langue">Langue</label><br>
+                        <select name="langue" id="langue" size="2">
+                            <option value="fr" selected>Français</option>
+                            <option value="en">English</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="courriel">Courriel</label><br>
+                        <input type="email" name="courriel" id="courriel" size="72" required>
+                    </p>
+                    <p>
+                        <input type="submit" value="Envoyer">
+                        <input type="reset" value="Annuler">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <p>Copyright <strong>&#169;</strong> 2024 - Charles-Antoine Fournier</p>
+            <div id="right-footer">
+                <h3>Contactez-Nous</h3>
+                <nav id="medias-nav">
+                    <ul>
+                        <li class="media-link"><a href="https://www.linkedin.com/in/charles-antoine-fournier-8a9583224/" rel="linkedin">
+                            <img src="../images/icons/linkedin-round-svgrepo-com.svg" alt="linkedin">
+                        </a></li>
+                        <li class="media-link"><a href="https://github.com/CAF2801" rel="github">
+                            <img src="../images/icons/github-142-svgrepo-com.svg" alt="github">
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
