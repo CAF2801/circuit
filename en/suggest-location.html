@@ -9,7 +9,7 @@
 </head>
 <body>
 <header id="header">
-    <h1>St.Lawrence Strolls</h1>
+    <h1 class="cache-ecran">St.Lawrence Strolls</h1>
     <a href="index.html"><img src="../images/logo.svg" alt="les-balades-du-st-laurent"></a>
     <nav id="navbar">
         <ul id="navlist">
@@ -20,11 +20,11 @@
     </nav>
 </header>
 <main id="main-content">
-    <section id="form-container">
-        <h2>Suggest a place</h2>
-        <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="form">
-            <fieldset>
-                <legend>Informations about the point of interest</legend>
+    <section class="form-container">
+        <div class="form-item">
+            <h2>Suggest a place</h2>
+            <h3>Information about the point of interest</h3>
+            <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="form">
                 <p>
                     <label for="title">Title</label><br>
                     <input type="text" name="title" id="title" size="72" required>
@@ -60,15 +60,15 @@
                     <input type="submit" value="Send">
                     <input type="reset" value="Cancel">
                 </p>
-            </fieldset>
-        </form>
+            </form>
+        </div>
     </section>
 </main>
-<footer>
-    <div id="footer-container">
+<footer id="footer">
+    <div class="footer-container">
         <p>Copyright <strong>&#169;</strong> 2024 - Charles-Antoine Fournier</p>
-        <div id="right-footer">
-            <h3>Contact us</h3>
+        <div class="right-footer">
+            <h3>Contactez-Nous</h3>
             <nav id="medias-nav">
                 <ul>
                     <li class="media-link"><a href="https://www.linkedin.com/in/charles-antoine-fournier-8a9583224/" rel="linkedin">
