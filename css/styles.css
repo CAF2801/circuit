@@ -297,30 +297,34 @@ main {
     border-radius: var(--radius-card);
 }
 
-.expandable-box {
-    padding: 0.63rem 0.4rem;
-    cursor: pointer;
-    overflow: hidden;
-    display: inline-block;
-    white-space: nowrap;
-    transition: width 0.5s ease;
-    width: 10%;
-}
 
-.expandable-box:hover,
-.expandable-box:focus {
-    width: 60%;
-}
 
-.hidden-text {
-    opacity: 0;
-    margin-left: 0.31rem;
-    transition: opacity 0.5s ease;
-}
+@media screen and (min-width: 768px) {
+    .expandable-box {
+        padding: 0.63rem 0.4rem;
+        cursor: pointer;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        transition: width 0.5s ease;
+        width: 10%;
+    }
 
-.expandable-box:hover .hidden-text,
-.expandable-box:focus .hidden-text {
-    opacity: 1;
+    .expandable-box:hover,
+    .expandable-box:focus {
+        width: 45%;
+    }
+
+    .hidden-text {
+        opacity: 0;
+        margin-left: 0.31rem;
+        transition: opacity 0.5s ease;
+    }
+
+    .expandable-box:hover .hidden-text,
+    .expandable-box:focus .hidden-text {
+        opacity: 1;
+    }
 }
 
 /* A-PROPOS-FR-CONTENU */
