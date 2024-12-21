@@ -164,6 +164,14 @@ footer .footer-container p {
     margin: 0 0.5rem;
 }
 
+#medias-nav ul li a img {
+    transition: scale 0.5s ease-in-out;
+}
+
+#medias-nav ul li a img:hover {
+    transform: scale(1.5);
+}
+
 @media screen and (min-width: 768px) {
     footer .footer-container {
         display: flex;
