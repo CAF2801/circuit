@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>St.Lawrence Strolls</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../node_modules/mediaelement/build/mediaelementplayer.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css" media="screen">
+    <link rel="stylesheet" href="../css/impression.css" media="print">
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../node_modules/mediaelement/build/mediaelement-and-player.min.js"></script>
 </head>
 <body>
     <header id="header">
@@ -15,71 +20,83 @@
             <ul id="navlist">
                 <li class="nav-button"><a href="about-us.html">About</a></li>
                 <li class="nav-button"><a href="suggest-location.html">Suggest a place</a></li>
-                <li id="alt-linguistique" class="lang-button"><a href="#" lang="fr" translate="no">Français</a></li>
+                <li><a href="#" id="alt-linguistique" class="lang-button" lang="fr" translate="no" data-location-id="page-principale">Français</a></li>
             </ul>
         </nav>
     </header>
     <main id="main-content">
-        <section id="point-of-interest-1" class="carousel">
-            <div id="interest-1" class="content-wrapper">
-                <div class="head-wrapper">
-                    <h2>Berthier-Sur-Mer Beach</h2>
-                    <h3>Berthier-Sur-Mer</h3>
-                    <div class="image-container">
-                        <img src="../images/point-of-interest/plage-berthier-sur-mer.jpg" alt="plage-berthier-sur-mer-plage">
-                        <p class="expandable-box"><strong>&#169;</strong><span class="hidden-text">Mégan Gagné Photographe</span></p>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <section id="point-of-interest-1" class="swiper-slide">
+                    <div id="interest-1" class="content-wrapper">
+                        <div class="head-wrapper">
+                            <h2>Berthier-Sur-Mer Beach</h2>
+                            <h3>Berthier-Sur-Mer</h3>
+                            <div class="image-container">
+                                <img src="../images/point-of-interest/plage-berthier-sur-mer.jpg" alt="plage-berthier-sur-mer-plage">
+                                <p class="expandable-box"><strong>&#169;</strong><span class="hidden-text">Mégan Gagné Photographe</span></p>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <h3>Learn more about the place</h3>
+                            <p>Located 20 minutes from Lévis, Berthier-sur-Mer Beach is the only sandy beach between Québec City and the Bas-Saint-Laurent region.</p>
+                            <div class="audio-container">
+                                <audio src="../audio/plage-berthier-sur-mer-fr.mp3" controls></audio>
+                            </div>
+                            <button id="view-button1">Show Details</button>
+                            <p id="description1">The municipality of Berthier-sur-Mer is part of the Montmagny RCM, located in the Chaudière-Appalaches region. The town is especially known for its marina, which serves as the departure point for excursions to Grosse-Île and Isle-aux-Grues. Several restaurants are conveniently located near the marina and the municipal beach. Berthier-sur-Mer Beach is a hotspot for windsurfing and kitesurfing enthusiasts. Visitors can also enjoy stunning views of the western tip of Île d’Orléans and Mont Sainte-Anne. It’s the perfect destination for a family swimming outing or a romantic getaway.</p>
+                            <button id="close-button1">Hide Details</button>
+                        </div>
                     </div>
-                </div>
-                <div class="text-container">
-                    <h3>Learn more about the place</h3>
-                    <p>Located 20 minutes from Lévis, Berthier-sur-Mer Beach is the only sandy beach between Québec City and the Bas-Saint-Laurent region.</p>
-                    <p>The municipality of Berthier-sur-Mer is part of the Montmagny RCM, located in the Chaudière-Appalaches region. The town is especially known for its marina, which serves as the departure point for excursions to Grosse-Île and Isle-aux-Grues. Several restaurants are conveniently located near the marina and the municipal beach. Berthier-sur-Mer Beach is a hotspot for windsurfing and kitesurfing enthusiasts. Visitors can also enjoy stunning views of the western tip of Île d’Orléans and Mont Sainte-Anne. It’s the perfect destination for a family swimming outing or a romantic getaway.</p>
-                    <div class="audio-container">
-                        <audio src="../audio/plage-berthier-sur-mer-fr.mp3" controls></audio>
+                </section>
+                <section id="point-of-interest-2" class="swiper-slide">
+                    <div id="interest-2" class="content-wrapper">
+                        <div class="head-wrapper">
+                            <h2>Pointe de la Martinière Park</h2>
+                            <h3>Lévis</h3>
+                            <div class="image-container">
+                                <img src="../images/point-of-interest/parc-pointe-martiniere.jpg" alt="pointe-martiniere">
+                                <p class="expandable-box"><strong>&#169;</strong><span class="hidden-text">Mégan Gagné Photographe</span></p>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <h3>Learn more about the place</h3>
+                            <p>Located less than 5 minutes from downtown Lévis, Parc de la Pointe de la Martinière is a favorite spot for outdoor enthusiasts.</p>
+                            <div class="audio-container">
+                                <audio src="../audio/pointe-martinière-fr.mp3" controls></audio>
+                            </div>
+                            <button id="view-button2">Show Details</button>
+                            <p id="description2">This park is ideal for hiking, cycling, and strolls with your furry companion. From the visitor center, you can access walking trails along the river and bike paths that connect to the Parcours des Anses and Parcours Harlaka, which lead directly to the Cycloroute de Bellechasse. One trail even provides access to the river, offering a breathtaking view of Île d’Orléans. The park is especially charming in the fall, with the vibrant colors of the leaves, and in winter, it features snowshoeing trails to enjoy the snowy landscape.</p>
+                            <button id="close-button2">Hide Details</button>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <section id="point-of-interest-3" class="swiper-slide">
+                    <div id="interest-3" class="content-wrapper">
+                        <div class="head-wrapper">
+                            <h2>Paquet Dock</h2>
+                            <h3>Lévis</h3>
+                            <div class="image-container">
+                                <img src="../images/point-of-interest/quai-paquet.jpg" alt="quai-paquet">
+                                <p class="expandable-box"><strong>&#169;</strong><span class="hidden-text">Mégan Gagné Photographe</span></p>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <h3>Learn more about the place</h3>
+                            <p>Located less than 2 minutes from downtown Lévis, Quai Paquet is the gateway to Old Lévis and Old Québec.</p>
+                            <div class="audio-container">
+                                <audio src="../audio/quai-paquet-fr.mp3" controls></audio>
+                            </div>
+                            <button id="view-button3">Show Details</button>
+                            <p id="description3">Easily accessible thanks to ample parking, the quay allows visitors to reach the ferry terminal for a stroll through Old Québec. The Parcours des Anses bike trail also passes through this area, making it an excellent stop for cyclists. History enthusiasts will enjoy the A.C. Davie Museum, which offers workshops on the historic shipyards that once operated there. In recent years, the City of Lévis has revitalized the quay promenade, adding water fountains to help visitors cool off on hot days. Just steps from the ferry terminal, craft beer lovers can visit Le Corsaire Brewery for a refreshing drink.</p>
+                            <button id="close-button3">Hide Details</button>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-        <section id="point-of-interest-2" class="carousel">
-            <div id="interest-2" class="content-wrapper">
-                <div class="head-wrapper">
-                    <h2>Pointe de la Martinière Park</h2>
-                    <h3>Lévis</h3>
-                    <div class="image-container">
-                        <img src="../images/point-of-interest/parc-pointe-martiniere.jpg" alt="pointe-martiniere">
-                        <p class="expandable-box"><strong>&#169;</strong><span class="hidden-text">Mégan Gagné Photographe</span></p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <h3>Learn more about the place</h3>
-                    <p>Located less than 5 minutes from downtown Lévis, Parc de la Pointe de la Martinière is a favorite spot for outdoor enthusiasts.</p>
-                    <p>This park is ideal for hiking, cycling, and strolls with your furry companion. From the visitor center, you can access walking trails along the river and bike paths that connect to the Parcours des Anses and Parcours Harlaka, which lead directly to the Cycloroute de Bellechasse. One trail even provides access to the river, offering a breathtaking view of Île d’Orléans. The park is especially charming in the fall, with the vibrant colors of the leaves, and in winter, it features snowshoeing trails to enjoy the snowy landscape.</p>
-                    <div class="audio-container">
-                        <audio src="../audio/pointe-martinière-fr.mp3" controls></audio>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="point-of-interest-3" class="carousel">
-            <div id="interest-3" class="content-wrapper">
-                <div class="head-wrapper">
-                    <h2>Paquet Dock</h2>
-                    <h3>Lévis</h3>
-                    <div class="image-container">
-                        <img src="../images/point-of-interest/quai-paquet.jpg" alt="quai-paquet">
-                        <p class="expandable-box"><strong>&#169;</strong><span class="hidden-text">Mégan Gagné Photographe</span></p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <h3>Learn more about the place</h3>
-                    <p>Located less than 2 minutes from downtown Lévis, Quai Paquet is the gateway to Old Lévis and Old Québec.</p>
-                    <p>Easily accessible thanks to ample parking, the quay allows visitors to reach the ferry terminal for a stroll through Old Québec. The Parcours des Anses bike trail also passes through this area, making it an excellent stop for cyclists. History enthusiasts will enjoy the A.C. Davie Museum, which offers workshops on the historic shipyards that once operated there. In recent years, the City of Lévis has revitalized the quay promenade, adding water fountains to help visitors cool off on hot days. Just steps from the ferry terminal, craft beer lovers can visit Le Corsaire Brewery for a refreshing drink.</p>
-                    <div class="audio-container">
-                        <audio src="../audio/quai-paquet-fr.mp3" controls></audio>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </main>
     <footer id="footer">
         <div class="footer-container">
@@ -99,5 +116,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

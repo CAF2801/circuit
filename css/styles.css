@@ -254,11 +254,12 @@ footer .footer-container p {
 /* INDEX-FR-CONTENU */
 
 main {
-    margin-bottom: 2.5rem;
+    margin: 2.5rem;
+    padding: 0.5rem 1rem;
 }
 
-.carousel {
-    margin-top: 2.5rem;
+main .swiper-slide {
+    margin-bottom: 2.5rem;
     padding: 0.5rem 1rem;
 }
 
@@ -335,6 +336,41 @@ main {
     }
 }
 
+#view-button1,
+#close-button1,
+#view-button2,
+#close-button2,
+#view-button3,
+#close-button3 {
+    background-color: var(--blue);
+    max-width: 10rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: var(--radius);
+    border-style: none;
+    font-family: "Quicksand", sans-serif;
+    color: var(--white);
+    transition: background-position 0.3s,
+    transform 0.3s;
+}
+
+#view-button1:hover,
+#view-button1:focus,
+#close-button1:hover,
+#close-button1:focus,
+#view-button2:hover,
+#view-button2:focus,
+#close-button2:hover,
+#close-button2:focus,
+#view-button3:hover,
+#view-button3:focus,
+#close-button3:hover,
+#close-button3:focus {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, var(--blue) 50%, var(--light-azur) 50%);
+    background-position: 100% 0;
+}
+
 /* A-PROPOS-FR-CONTENU */
 
 .about-container {
@@ -395,11 +431,7 @@ label {
     margin-bottom: 0;
 }
 
-label[for="title"]::after,
-label[for="accroche"]::after,
-label[for="description"]::after,
-label[for="langue"]::after,
-label[for="courriel"]::after {
+.required::after {
     content: "*";
     color: red;
     margin-left: 0.1rem;
